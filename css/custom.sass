@@ -1,0 +1,372 @@
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:700,300,600,400)
+@font-face
+	font-family: 'Georgia-Italic'
+	src: url('Georgia-Italic.eot?#iefix') format('embedded-opentype'),  url('Georgia-Italic.woff') format('woff'), url('Georgia-Italic.ttf')  format('truetype'), url('Georgia-Italic.svg#Georgia-Italic') format('svg')
+	font-weight: normal
+	font-style: normal
+
+$primary-color: #0080C9
+$secondary-color: #E78B28
+$base-color: #626f79
+$primary-font: 'Open Sans', sans-serif
+$secondary-font: 'Georgia-Italic'
+
+.plfont
+	font-weight: 300
+.psbfont
+	font-weight: 600
+.pbfont
+	font-weight: 700
+
+::selection
+	color: #FFF
+	background: $base-color
+html, body
+	overflow-x: hidden
+	height: 100%
+body
+	font-family: $primary-font
+	font-size: 15px
+	line-height: 1.134
+	color: $base-color
+	-webkit-user-select: none
+	-moz-user-select: -moz-none
+	-ms-user-select: none
+	user-select: none
+
+.pushy
+	background: $base-color
+	ul
+		margin: 0
+		padding: 0
+		li
+			a
+				color: #FFF
+				font-family: $primary-font
+				font-weight: 400
+				padding: 15px
+				font-size: 15px
+				line-height: 1.533
+				span
+					font-size: 153.3%
+					float: left
+					margin-right: 5px
+					width: 25px
+					text-align: center
+.floating-bar
+	position: absolute
+	right: -186px
+	margin: -90px 0 0 0
+	top: 50%
+	z-index: 1000
+	li
+		margin-bottom: 1px
+		color: #FFF
+		position: relative
+		cursor: pointer
+		div
+			background-color: $secondary-color
+			padding: 10px 50px 10px 10px
+			text-align: center
+			overflow: hidden
+			line-height: 1.6
+			position: relative
+			left: 0
+			transition: all 200ms linear
+			width: 235px
+			span
+				padding-right: 10px
+				border-right: 1px solid #FFF
+				margin-right: 10px
+				font-size: 160%
+				float: left
+				width: 40px
+				text-align: center
+		&:active
+			div
+				left: -185px
+.header
+	padding-top: 15px
+	.logo
+		float: left
+		width: 80px
+		margin-right: 5px 
+	.title
+		font-family: $secondary-font
+		font-size: 320%
+		color: $primary-color
+		position: relative
+		&:after
+			content: '.com'
+			font-size: 50%
+			left: 100%
+			bottom: 10px
+			position: absolute
+	.slogan
+		font-family: $secondary-font
+		font-size: 113.3%
+		clear: both
+	.header-section-padding
+		padding-top: 28px
+		padding-bottom: 28px
+		.menu-btn
+			cursor: pointer
+			span
+				font-size: 113.3%
+				margin-right: 5px
+@mixin text-shadow($color)
+	text-shadow: 1px 1px 0px $color
+@mixin top-padding($padding)
+	padding-top: $padding
+.banner
+	height: 450px
+	background-color: $base-color
+	margin: 15px auto 0
+	position: relative
+	border-style: solid
+	border-color: $base-color
+	border-width: 1px 0
+	overflow: hidden
+	background-image: url('../images/banner-bg-img1.jpg')
+	background-position: center -150px
+	background-repeat: no-repeat
+	background-size: 100%
+	div.text-center
+		height: 450px
+	h1
+		font-size: 399.9%
+		letter-spacing: -1px
+		text-transform: capitalize
+		font-family: $secondary-font
+		color: $base-color
+		padding: 25px 0
+		margin: 25px 0 0 0
+		@include text-shadow(#000)
+		span
+			@extend .pbfont
+	p
+		color: #000
+		@include text-shadow(rgba(255,255,255,0.3))
+		font-size: 113.3%
+		@extend .plfont
+		padding-bottom: 25px
+		line-height: 2
+	button
+		border-radius: 0
+		font-size: 113.3%
+		background-color: $primary-color
+		color: #FFF
+		outline: none
+	ul.segments
+		position: absolute
+		bottom: 1px
+		background-color: rgba(255,255,255,0.9)
+		margin: 0 auto
+		left: 0
+		right: 0
+		padding: 10px 0
+		li
+			display: inline-block
+			font-size: 17px
+			line-height: 1.529
+			padding: 0 30px
+			border-left: 1px solid $base-color
+			&:first-child
+				border: none
+			span
+				font-size: 153.3%
+				float: left
+				margin-right: 5px
+.footer
+	@include top-padding(30px)
+	padding-bottom: 15px
+	.feedback
+		background-color: #EEE
+		padding: 10px 15px
+		overflow: hidden
+		font-size: 133.3%
+		line-height: 1.9
+		margin-bottom: 15px
+		button
+			border-radius: 0
+			font-size: 85%
+			background-color: $secondary-color
+			outline: none
+	h2
+		font-size: 153.3%
+		margin: 0 0 10px 0
+		color: $primary-color
+		letter-spacing: -1px
+		line-height: 2
+		span
+			font-size: 200%
+			float: left
+			margin-right: 10px
+	p
+		font-size: 86.7%
+		margin-bottom: 15px
+	input[type='text']
+		border-radius: 0
+		border-color: #CCC
+		color: $base-color
+		font-size: 86.7%
+		width: 80%
+		margin: 0 5px 0 0
+		float: left
+	button
+		border-radius: 0
+		background-color: $primary-color
+		outline: none
+		color: #FFF
+	.copy, .love
+		@include top-padding(15px)
+		line-height: 1.308
+		font-size: 86.7%
+	.love
+		span
+			width: 20px
+			height: 17px
+			display: inline-block
+			background: url('../images/love.png') no-repeat center center
+			vertical-align: middle
+			background-size: 20px 17px
+.twitter
+	iframe
+		height: 100px !important
+.btn:hover, .btn:focus, .btn.focus
+	color: #FFF
+.inner-body
+	background-color: $base-color
+	color: #FFF
+	padding: 0 15px 15px 15px
+	margin-top: 25px
+	&>div>div
+		@include top-padding(15px)
+	h1
+		margin: 0
+	textarea
+		resize: none
+		height: 150px
+	button
+		border-radius: 0
+		font-size: 85%
+		background-color: $secondary-color
+		outline: none
+		color: #FFF
+		margin-top: 1px
+	a
+		color: $secondary-color
+	.input-group
+		.input-group-addon
+			background-color: $primary-color
+			border: none
+			border-radius: 0
+			.fa
+				width: 20px
+				color: #FFF
+				font-size: 19px
+		.form-control, textarea
+			border: none
+			border-radius: 0
+.modal-body
+	textarea
+		resize: none
+		height: 150px
+	button
+		border-radius: 0
+		font-size: 85%
+		background-color: $secondary-color
+		outline: none
+		color: #FFF
+		margin-top: 1px
+	.input-group
+		.input-group-addon
+			background-color: $primary-color
+			border: none
+			border-radius: 0
+			.fa
+				width: 20px
+				color: #FFF
+				font-size: 19px
+		.form-control, textarea
+			border-style: solid
+			border-width: 1px 1px 1px 0
+			border-color: #DDD
+			border-radius: 0
+.modal-footer
+	button
+		border-radius: 0
+		background-color: $secondary-color
+		outline: none
+		color: #FFF
+		border: none
+.portfolio
+	position: relative
+	-webkit-box-shadow: 1px 1px 5px 0 rgba(0,0,0,0.5)
+	box-shadow: 1px 1px 5px 0 rgba(0,0,0,0.5)
+	display: inline-block
+	width: 100%
+	max-width: 290px
+	.info
+		position: absolute
+		display: block
+		left: 0
+		bottom: 0
+		background-color: $secondary-color
+		color: #FFF
+		font-size: 86.7%
+		padding: 10px
+		width: 100%
+		z-index: 10
+		a
+			color: #FFF
+			font-size: 115.4%
+@media screen and (max-width: 1199px)
+	.banner
+		background-position: center top
+		div.text-center
+			padding-bottom: 15px
+			ul
+				li
+@media screen and (max-width: 991px)
+	body
+		font-size: 14px
+	.banner
+		background-image: none
+		height: auto
+		div.text-center
+			height: auto
+			padding-bottom: 15px
+			h1
+				color: #FFF
+@media screen and (max-width: 767px)
+	body
+		font-size: 12px
+	.header
+		.logo
+			width: 70px
+		.header-section-padding
+			padding-bottom: 0
+	.banner
+		height: auto
+		padding-bottom: 15px
+		background-color: $secondary-color
+		background-image: none
+		div.text-center
+			height: auto
+			h1
+				margin: 0
+				color: #FFF
+	.footer
+		.feedback
+			line-height: normal
+			text-align: center
+			button
+				margin-top: 15px
+				float: none !important
+			input[type='text']
+				width: 100%
+				margin: 0 0 5px 0
+			.contact-info
+				div
+					padding: 10px
